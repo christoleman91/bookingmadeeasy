@@ -1,0 +1,482 @@
+﻿body {
+    font: 15px/1.5 'Lobster', Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.wrapper {
+    max-width: 70em;
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgb(241, 195, 110);
+}
+
+@media (min-width: 200px) and (max-width: 480px ) {
+
+    nav {
+        font-size: 1.6em;
+        padding: 0;
+        text-align: center;
+        text-decoration: none;
+    }
+
+        nav ul {
+            margin: 0;
+            padding: .5em;
+        }
+
+        nav li {
+            background-color: rgb(241, 195, 110);
+            list-style: none;
+            display: inline-block;
+        }
+
+        nav a {
+            padding: .1em;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+            nav a:hover {
+                padding: .1em;
+                text-decoration: none;
+                color: #1496e8;
+            }
+
+    header img {
+        width: 100%;
+        height: auto;
+    }
+
+    .bannerContent {
+        display: none;
+    }
+
+    #coverPhoto {
+        display: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+
+    nav {
+        background-color: rgba(241, 195, 110);
+        font-size: 1.8em;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            background-color: rgb(241, 195, 110);
+            list-style: none;
+            display: inline-block;
+        }
+
+        nav a {
+            padding: .1em;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+            nav a:hover {
+                padding: .1em;
+                text-decoration: none;
+                color: #1496e8;
+            }
+
+    header img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (min-width: 769px) {
+    header {
+        padding: .35em;
+        width: 100%;
+    }
+
+    header,
+    nav {
+        display: inline-block;
+    }
+
+    nav {
+        float: right;
+        font-size: 1.5em;
+    }
+
+        nav ul {
+            margin: 0;
+            display: inline;
+            padding-right: .15em;
+        }
+
+            nav ul li {
+                display: inline-block;
+                list-style: none;
+                padding: .36em 0.9375em;
+            }
+
+        nav a {
+            padding: .1em;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+            nav a:hover {
+                padding: .1em;
+                text-decoration: none;
+                color: #1496e8;
+            }
+}
+
+
+@media (min-width: 769px) and (max-width:2500px) {
+    header {
+        padding: .05em;
+        width: 100%;
+    }
+
+    header,
+    nav {
+        display: inline-block;
+    }
+
+    nav {
+        float: right;
+        font-size: 1.3em;
+        margin-top: .5em;
+    }
+
+        nav ul {
+            margin: 0;
+            display: inline;
+            padding-right: .05em;
+        }
+
+            nav ul li {
+                display: inline-block;
+                list-style: none;
+                padding: .16em 0.45em;
+            }
+
+        nav a {
+            padding: .1em;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+            nav a:hover {
+                padding: .1em;
+                text-decoration: none;
+                color: #1496e8;
+            }
+}
+
+
+
+p {
+    font-family: 'Cabin',Arial, Helvetica, sans-serif;
+}
+
+li {
+    font-family: 'Cabin',Arial, Helvetica, sans-serif;
+}
+
+h1 h2 h3 h4 h5 {
+    font-family: 'Cabin',Arial, Helvetica, sans-serif;
+}
+
+.containerBanImg {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.bannerContent {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#coverPhoto {
+    min-height: 400px;
+    position: relative;
+    text-align: center;
+    text-align: center;
+    color: #ffffff;
+    width: 99%;
+    margin-top: 30px;
+}
+
+footer {
+    padding: 5px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #1496e8;
+    text-align: center;
+    font-size: 20px;
+}
+
+.confirmPage {
+    border: 2px solid #1496e8;
+    padding: 10px;
+    background-color: #ffffff;
+    margin-top: 100px;
+}
+
+.hotelInfo {
+    border: 2px solid #1496e8;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+#branchesH3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#CCselect {
+    margin-top: 10px;
+}
+
+#branchesInfo {
+    padding: 10px;
+}
+
+@media screen and(min-width: 400px) {
+    .bannerContent h1 {
+        display: none;
+    }
+
+        .bannerContent h1 p {
+            display: none;
+        }
+
+    .card {
+        align-content: center;
+        margin-right: 50%;
+        margin-left: 50%;
+    }
+
+    #hotels {
+        margin-right: 50%;
+        margin-left: 50%;
+    }
+
+    #smallNav {
+        display: block;
+    }
+}
+
+#fryPic {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 0px;
+}
+
+
+.buttonAbout {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    width: auto;
+}
+
+.buttonAboutFB {
+    background-color: #3B5998;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.buttonEmail:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    text-decoration: none;
+    color: white;
+}
+
+.buttonAboutFB:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    text-decoration: none;
+    color: white;
+}
+
+#textAbout {
+    text-align: justify;
+}
+
+#h4About {
+    text-align-last: center;
+}
+
+#fbContact {
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    margin-left: 0;
+}
+
+    #fbContact:hover {
+        color: #1496e8
+    }
+
+.bookingInfo #contactH2 {
+    text-align: center;
+}
+
+#contactTel {
+    text-decoration: none;
+    color: #000;
+    margin-left: 0;
+}
+
+    #contactTel:hover {
+        color: #1496e8;
+    }
+
+.bookingInfo #labelContact {
+    font-size: 20px;
+}
+
+.card ul li {
+    list-style-type: square;
+}
+
+#priceText {
+    color: rgb(14, 184, 20);
+}
+
+#branchesCarousel {
+    width: 75%;
+    margin: auto;
+    border: #000 1px solid;
+    box-shadow: #5e5c5c 3px 5px;
+}
+
+.HotelContent {
+    margin-top: 50px;
+}
+
+    .HotelContent ul li {
+        list-style-type: square;
+        margin-left: 30px;
+    }
+
+    .HotelContent img {
+        margin-right: 25px;
+    }
+
+.reviews {
+    margin-top: 30px;
+}
+
+.allAmenities {
+    margin-top: 20px;
+}
+
+#price {
+    font-size: 24px;
+}
+
+#labelHotelPage {
+    text-align: left;
+    margin-left: 30px;
+    font-family: 'Cabin',Arial, Helvetica, sans-serif;
+}
+
+.innerHotelContent {
+    background-color: #fff;
+}
+
+.hotelInfo a {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.bookingInfo {
+    border: 2px solid #1496e8;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+    .bookingInfo input {
+        width: 100%;
+        padding: 5px;
+    }
+
+.bookingInfoRightSide {
+    background-color: rgb(251, 253, 237);
+    border: 1px solid #000;
+    height: 700px;
+    margin-top: 150px;
+}
+
+#ratingGood {
+    color: rgb(15, 160, 19);
+}
+
+#ratingAverage {
+    color: rgb(236, 158, 41);
+}
+
+#ratingBad {
+    color: #e81414;
+}
+
+.bookingInfo a {
+    margin-top: 20px;
+    margin-left: 12%;
+}
+
+#map {
+    height: 500px;
+    margin-top: 50px;
+    width: 97%;
+}

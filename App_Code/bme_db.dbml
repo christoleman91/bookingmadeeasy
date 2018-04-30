@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bme_db" Class="bme_dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(local);Initial Catalog=bme_db;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="HotelsConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.sp_HotelCategories_ViewAll" Method="sp_HotelCategories_ViewAll">
+    <ElementType Name="sp_HotelCategories_ViewAllResult">
+      <Column Name="HotelCatID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HotelCatTitle" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="HotelCatTitleSmall" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="HotelCatDesc" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="HotelCatImage" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Hotels_ViewAll" Method="sp_Hotels_ViewAll">
+    <Parameter Name="HotelCatID" Parameter="hotelCatID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_Hotels_ViewAllResult">
+      <Column Name="HotelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HotelDesc" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="HotelPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="HotelRooms" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HotelInfo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="HotelsShortDesc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="HotelCatID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HotelName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Hotels_SingleRecord" Method="sp_Hotels_SingleRecord">
+    <Parameter Name="HotelID" Parameter="hotelID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_Hotels_SingleRecordResult">
+      <Column Name="HotelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HotelDesc" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="HotelRooms" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HotelPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="HotelInfo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="HotelsShortDesc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="HotelName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="HotelCatID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HotelAmenitiesMain" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="HotelFacilities" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="HotelRoomFacilities" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_HotelImages_Images" Method="sp_HotelImages_Images">
+    <Parameter Name="HotelID" Parameter="hotelID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_HotelImages_ImagesResult">
+      <Column Name="ImageID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ImageLink" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_HotelReviews_Insert" Method="sp_HotelReviews_Insert">
+    <Parameter Name="HotelID" Parameter="hotelID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReviewerTitle" Parameter="reviewerTitle" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="ReviewerName" Parameter="reviewerName" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="ReviewerComment" Parameter="reviewerComment" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="ReviewerRating" Parameter="reviewerRating" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_HotelReviews_ViewAllByID" Method="sp_HotelReviews_ViewAllByID">
+    <Parameter Name="HotelID" Parameter="hotelID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_HotelReviews_ViewAllByIDResult">
+      <Column Name="ReviewID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReviewerTitle" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="ReviewerComment" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ReviewerName" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ReviewerDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ReviewerRating" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HotelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>
